@@ -34,7 +34,7 @@ void validar_dados(string paciente, string profissional, string data, int hora, 
 
     if (paciente.empty() or profissional.empty()) throw invalid_argument("Paciente ou profissional não podem ser vazios");
 
-    for (Agendamento agendamento : agendamentos) {
+    for (const Agendamento& agendamento : agendamentos) {
         if (agendamento.data == data && agendamento.hora == hora && agendamento.profissional == profissional) throw invalid_argument("Agendamento já existe para o mesmo profissional e horário");
     }
 }
@@ -46,7 +46,21 @@ void agendar_consulta(string paciente, string profissional, string data, int hor
     cout << "Agendamento realizado para " << paciente << endl;
 }
 
-void remover_agendamento(string paciente, string data, int hora, string nova_data, int nova_hora) {
+void remarcar_agendamento(string paciente, string data, int hora, string nova_data, int nova_hora) {
+    Agendamento agendamento_a_remarcar;
+    bool horario_ocupado = false;
+    for (Agendamento& agendamento : agendamentos) {
+        if (agendamento.paciente == paciente && agendamento.data == data && agendamento.hora == hora) {
+            agendamento_a_remarcar = agendamento;
+            break;
+        }
+    }
+    if (!(agendamento_a_remarcar.paciente.empty())) throw invalid_argument("Agendamento não encontrado para o paciente " + paciente + " na data " + data + " e hora " + to_string(hora));
+    validar_dados(agendamento_a_remarcar.paciente, agendamento_a_remarcar.profissional, nova_data, nova_hora, agendamento_a_remarcar.duracao);
+    agendamento_a_remarcar.data = nova_data;
+    agendamento_a_remarcar.hora = nova_hora;
+
+
     for (int i = 0; i < agendamentos.size(); i++) {
         if (agendamentos[i].paciente == paciente && agendamentos[i].data == data && agendamentos[i].hora == hora) {
             bool ok = true;
@@ -79,7 +93,7 @@ int main() {
     agendar_consulta("Ana", "Dr. Silva", "2026-10-05", 9, 30);
     agendar_consulta("Bruno", "Dr. Silva", "2026-10-05", 9, 30);
     agendar_consulta("Carla", "Dra. Souza", "2026-10-05", 14, 60);
-    remover_agendamento("Ana", "2026-10-05", 9, "2026-10-06", 10);
+    remarcar_agendamento("Ana", "2026-10-05", 9, "2026-10-06", 10);
     listar_agendamentos("2026-10-05");
     return 0;
 }
