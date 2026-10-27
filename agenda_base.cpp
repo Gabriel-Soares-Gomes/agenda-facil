@@ -1,10 +1,3 @@
-// ==========================================================
-// Arquivo: agenda_base.cpp
-// Autor: Equipe de estagiarios - 03/02/2024
-// Alterado por: Joao - 15/05/2025
-// Alterado por: Marina - 09/01/2026
-// ==========================================================
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -22,7 +15,6 @@ struct A {
 vector<A> ag;
 
 void add(string p, string pr, string d, int h, int dur) {
-    // adiciona na lista
     try {
         if (h >= 8) {
             if (h < 18) {
@@ -47,7 +39,6 @@ void add(string p, string pr, string d, int h, int dur) {
 }
 
 void rem(string p, string d, int h, string nd, int nh) {
-    // remarca o atendimento
     for (int i = 0; i < ag.size(); i++) {
         if (ag[i].p == p && ag[i].d == d && ag[i].h == h) {
             bool ok = true;
@@ -67,14 +58,7 @@ void rem(string p, string d, int h, string nd, int nh) {
     }
 }
 
-// void desmarcar(string p, string d, int h) {
-//     ag.erase(...);
-// }
-
-// TODO: rever isso depois (Joao, 2025)
-
 void lst(string d) {
-    // lista os atendimentos do mes
     for (int i = 0; i < ag.size(); i++) {
         if (ag[i].d == d) {
             cout << ag[i].h << " " << ag[i].p << " " << ag[i].pr << " "
