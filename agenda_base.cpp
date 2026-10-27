@@ -3,31 +3,31 @@
 #include <vector>
 using namespace std;
 
-struct A {
-    string p;
-    string pr;
-    string d;
-    int h;
-    int dur;
-    string st;
+struct Agendamento {
+    string paciente;
+    string profissional;
+    string data;
+    int hora;
+    int duracao;
+    string status;
 };
 
-vector<A> ag;
+vector<Agendamento> ag;
 
-void add(string p, string pr, string d, int h, int dur) {
+void agendar_consulta(string paciente, string profissional, string data, int hora, int duracao) {
     try {
-        if (h >= 8) {
-            if (h < 18) {
-                if (dur > 0) {
+        if (hora >= 8) {
+            if (hora < 18) {
+                if (duracao > 0) {
                     bool ok = true;
                     for (int i = 0; i < ag.size(); i++) {
-                        if (ag[i].d == d && ag[i].h == h && ag[i].pr == pr) {
+                        if (ag[i].data == data && ag[i].hora == hora && ag[i].profissional == profissional) {
                             ok = false;
                         }
                     }
                     if (ok) {
-                        ag.push_back({p, pr, d, h, dur, "MARCADO"});
-                        cout << "Atendimento marcado para " << p << endl;
+                        ag.push_back({paciente, profissional, data, hora, duracao, "MARCADO"});
+                        cout << "Atendimento marcado para " << paciente << endl;
                     } else {
                         cout << "Horario ocupado" << endl;
                     }
@@ -38,18 +38,18 @@ void add(string p, string pr, string d, int h, int dur) {
     }
 }
 
-void rem(string p, string d, int h, string nd, int nh) {
+void remover_agendamento(string paciente, string data, int hora, string nova_data, int nova_hora) {
     for (int i = 0; i < ag.size(); i++) {
-        if (ag[i].p == p && ag[i].d == d && ag[i].h == h) {
+        if (ag[i].paciente == paciente && ag[i].data == data && ag[i].hora == hora) {
             bool ok = true;
             for (int j = 0; j < ag.size(); j++) {
-                if (ag[j].d == nd && ag[j].h == nh && ag[j].pr == ag[i].pr) {
+                if (ag[j].data == nova_data && ag[j].hora == nova_hora && ag[j].profissional == ag[i].profissional) {
                     ok = false;
                 }
             }
             if (ok) {
-                ag[i].d = nd;
-                ag[i].h = nh;
+                ag[i].data = nova_data;
+                ag[i].hora = nova_hora;
                 cout << "Remarcado" << endl;
             } else {
                 cout << "Horario ocupado" << endl;
@@ -58,20 +58,20 @@ void rem(string p, string d, int h, string nd, int nh) {
     }
 }
 
-void lst(string d) {
+void listar_agendamentos(string data) {
     for (int i = 0; i < ag.size(); i++) {
-        if (ag[i].d == d) {
-            cout << ag[i].h << " " << ag[i].p << " " << ag[i].pr << " "
-                 << ag[i].st << endl;
+        if (ag[i].data == data) {
+            cout << ag[i].hora << " " << ag[i].paciente << " " << ag[i].profissional << " "
+                 << ag[i].status << endl;
         }
     }
 }
 
 int main() {
-    add("Ana", "Dr. Silva", "2026-10-05", 9, 30);
-    add("Bruno", "Dr. Silva", "2026-10-05", 9, 30);
-    add("Carla", "Dra. Souza", "2026-10-05", 14, 60);
-    rem("Ana", "2026-10-05", 9, "2026-10-06", 10);
-    lst("2026-10-05");
+    agendar_consulta("Ana", "Dr. Silva", "2026-10-05", 9, 30);
+    agendar_consulta("Bruno", "Dr. Silva", "2026-10-05", 9, 30);
+    agendar_consulta("Carla", "Dra. Souza", "2026-10-05", 14, 60);
+    remover_agendamento("Ana", "2026-10-05", 9, "2026-10-06", 10);
+    listar_agendamentos("2026-10-05");
     return 0;
 }
