@@ -35,16 +35,16 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 
 | \# | Situação | Como foi resolvida, ou por que ficou |
 | :---- | :---- | :---- |
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
-| 6 |  |  |
-| 7 |  |  |
-| 8 |  |  |
-| 9 |  |  |
-| 10 |  |  |
+| 1 | Regras de negócio com I/O | Criação de um método separado para validar dados |
+| 2 | Conflito de horários de consultas | Método de validação verifica se há conflitos |
+| 3 | Variáveis mal nomeadas | Mudança dos nomes de variáveis para esclarecer seus significados no código |
+| 4 | Muitos if's aninhados | Separação dos if's para tratarem cláusulas de guarda e retornarem mais cedo |
+| 5 | Comentários vagos | Criação de documentação de API e refatoração dos nomes dos métodos |
+| 6 | Lógica de percorrer vetor repetida | Lógica implementada uma vez no método de validação |
+| 7 | Código morto | Código defasado foi deletado |
+| 8 | Catches genéricos | Catches agora capturam erros específicos |
+| 9 | Parâmetros sem validação | Parâmetros passam por uma validação antes de entrarem na lógica principal |
+| 10 | Busca sem interrupção | Os laços de repetição são interrompidos quando não é preciso mais percorrer a lista  |
 
 *Preencha a coluna "Situação" com Resolvida ou Dívida assumida.*
 
@@ -75,10 +75,19 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 
 | Item | Resposta |
 | :---- | :---- |
-| Comando para compilar e executar |  |
+| Comando para compilar e executar | > g++ agenda_base.cpp -o agenda && ./agenda |
 | Comando para gerar a documentação de API |  |
 | Onde a documentação gerada ficou no repositório |  |
 | Saída do programa de demonstração (cole aqui) |  |
+
+Saída: 
+
+Agendamento realizado para Ana<br>
+Erro: Agendamento já existe para o mesmo profissional e horário<br>
+Agendamento realizado para Carla<br>
+Remarcado com sucesso<br>
+14:00 | Carla | Dra. Souza | Marcado<br>
+
 
 **6\. Uso de ferramentas de IA**
 
