@@ -59,32 +59,15 @@ void remarcar_agendamento(string paciente, string data, int hora, string nova_da
     validar_dados(agendamento_a_remarcar.paciente, agendamento_a_remarcar.profissional, nova_data, nova_hora, agendamento_a_remarcar.duracao);
     agendamento_a_remarcar.data = nova_data;
     agendamento_a_remarcar.hora = nova_hora;
-
-
-    for (int i = 0; i < agendamentos.size(); i++) {
-        if (agendamentos[i].paciente == paciente && agendamentos[i].data == data && agendamentos[i].hora == hora) {
-            bool ok = true;
-            for (int j = 0; j < agendamentos.size(); j++) {
-                if (agendamentos[j].data == nova_data && agendamentos[j].hora == nova_hora && agendamentos[j].profissional == agendamentos[i].profissional) {
-                    ok = false;
-                }
-            }
-            if (ok) {
-                agendamentos[i].data = nova_data;
-                agendamentos[i].hora = nova_hora;
-                cout << "Remarcado" << endl;
-            } else {
-                cout << "Horario ocupado" << endl;
-            }
-        }
-    }
+    cout << "Remarcado" << endl;
 }
 
 void listar_agendamentos(string data) {
-    for (int i = 0; i < agendamentos.size(); i++) {
-        if (agendamentos[i].data == data) {
-            cout << agendamentos[i].hora << " " << agendamentos[i].paciente << " " << agendamentos[i].profissional << " "
-                 << agendamentos[i].status << endl;
+    if (!regex_match(data, data_padrao)) throw invalid_argument("Data inválida: " + data);
+
+    for (const Agendamento& agendamento : agendamentos) {
+        if (agendamento.data == data) {
+            cout << agendamento.hora << " " << agendamento.paciente << " " << agendamento.profissional << " " << agendamento.status << endl;
         }
     }
 }
