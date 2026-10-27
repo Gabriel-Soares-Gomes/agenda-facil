@@ -7,7 +7,7 @@ using namespace std;
 const unsigned short int HORARIO_INICIO = 8;
 const unsigned short int HORARIO_FIM = 17;
 const unsigned short int MINS_POR_PERIODO = 15;
-//Padrão de data: AAAA-MM-DD
+//Padrão de data: AAAA-MM-DD / YYYY-MM-DD
 const regex data_padrao(R"(^\d{4}-\d{2}-\d{2}$)");
 
 struct Agendamento {
@@ -47,19 +47,20 @@ void agendar_consulta(string paciente, string profissional, string data, int hor
 }
 
 void remarcar_agendamento(string paciente, string data, int hora, string nova_data, int nova_hora) {
-    Agendamento agendamento_a_remarcar;
-    bool horario_ocupado = false;
+    Agendamento* agendamento_encontrado = nullptr;
     for (Agendamento& agendamento : agendamentos) {
         if (agendamento.paciente == paciente && agendamento.data == data && agendamento.hora == hora) {
-            agendamento_a_remarcar = agendamento;
+            agendamento_encontrado = &agendamento;
             break;
         }
     }
-    if (!(agendamento_a_remarcar.paciente.empty())) throw invalid_argument("Agendamento não encontrado para o paciente " + paciente + " na data " + data + " e hora " + to_string(hora));
-    validar_dados(agendamento_a_remarcar.paciente, agendamento_a_remarcar.profissional, nova_data, nova_hora, agendamento_a_remarcar.duracao);
-    agendamento_a_remarcar.data = nova_data;
-    agendamento_a_remarcar.hora = nova_hora;
-    cout << "Remarcado" << endl;
+    if (agendamento_encontrado == nullptr) {
+        throw invalid_argument("Agendamento não encontrado para o paciente " + paciente + " na data " + data + " e hora " + to_string(hora));
+    }
+    validar_dados(agendamento_encontrado->paciente, agendamento_encontrado->profissional, nova_data, nova_hora, agendamento_encontrado->duracao);
+    agendamento_encontrado->data = nova_data;
+    agendamento_encontrado->hora = nova_hora;
+    cout << "Remarcado com sucesso" << endl;
 }
 
 void listar_agendamentos(string data) {
@@ -67,16 +68,16 @@ void listar_agendamentos(string data) {
 
     for (const Agendamento& agendamento : agendamentos) {
         if (agendamento.data == data) {
-            cout << agendamento.hora << " " << agendamento.paciente << " " << agendamento.profissional << " " << agendamento.status << endl;
+            cout << agendamento.hora << ":00 | " << agendamento.paciente << " | " << agendamento.profissional << " | " << agendamento.status << endl;
         }
     }
 }
 
 int main() {
-    agendar_consulta("Ana", "Dr. Silva", "2026-10-05", 9, 30);
-    agendar_consulta("Bruno", "Dr. Silva", "2026-10-05", 9, 30);
-    agendar_consulta("Carla", "Dra. Souza", "2026-10-05", 14, 60);
-    remarcar_agendamento("Ana", "2026-10-05", 9, "2026-10-06", 10);
-    listar_agendamentos("2026-10-05");
+    try {agendar_consulta("Ana", "Dr. Silva", "2026-10-05", 9, 30);} catch (const invalid_argument& e) {cout << "Erro: " << e.what() << endl;}
+    try{agendar_consulta("Bruno", "Dr. Silva", "2026-10-05", 9, 30);} catch (const invalid_argument& e) {cout << "Erro: " << e.what() << endl;}
+    try{agendar_consulta("Carla", "Dra. Souza", "2026-10-05", 14, 60);} catch (const invalid_argument& e) {cout << "Erro: " << e.what() << endl;}
+    try{remarcar_agendamento("Ana", "2026-10-05", 9, "2026-10-06", 10);} catch (const invalid_argument& e) {cout << "Erro: " << e.what() << endl;}
+    try{listar_agendamentos("2026-10-05");} catch (const invalid_argument& e) {cout << "Erro: " << e.what() << endl;}
     return 0;
 }
