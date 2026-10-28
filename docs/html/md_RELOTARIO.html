@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Agenda de Consultas: RELOTARIO</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Agenda de Consultas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('md_RELOTARIO.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">RELOTARIO </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><b>DIM0501 — Boas Práticas de Programação</b></p>
+<p><b>Relatório do Projeto da Unidade 1 — AgendaFácil</b></p>
+<p>Prof. Marcus Terra · DIMAp/UFRN · Semestre 2026.1 · Entrega: 25/10/2026</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Integrantes (nome e matrícula)  </th><th class="markdownTableHeadLeft">Linguagem  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Gabriel Soares Gomes (20250036690) <br  />
+ Luís Felipe Costa Barreto (20250030515) <br  />
+ Luís Antônio Santos Rabelo (20250029819) <br  />
+ Marcus Vinícius De Lima Souza (20250032716) <br  />
+ Davi Summer Silva Costa (20250033590)  </td><td class="markdownTableBodyLeft">C++  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>Repositório ou arquivo entregue</b>  </td><td class="markdownTableBodyLeft"><a href="https://github.com/Gabriel-Soares-Gomes/agenda-facil">https://github.com/Gabriel-Soares-Gomes/agenda-facil</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+</table>
+<p><b>Como usar este modelo:</b> preencha as seis seções abaixo, apague os textos em itálico e entregue em PDF ou Markdown. O relatório inteiro deve caber em até quatro páginas — é um documento de decisões, não uma redação.</p>
+<p><b>1. Diagnóstico do código-base</b></p>
+<p><em>Liste pelo menos dez anomalias encontradas no código-base, com no mínimo uma em cada categoria do checklist da Aula 2. Em "onde", aponte a função, a variável ou a linha — "está tudo errado" não é localização. Em "por que é um problema", escreva o efeito prático sobre quem vai ler ou manter o código, não a regra violada. Numere as anomalias: a seção 2 vai se referir a elas por número.</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">#  </th><th class="markdownTableHeadLeft">Categoria  </th><th class="markdownTableHeadLeft">Anomalia e onde está  </th><th class="markdownTableHeadLeft">Por que é um problema  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">1  </td><td class="markdownTableBodyLeft">Adequação e lógica  </td><td class="markdownTableBodyLeft">Mistura de regras de negócio com I/O. As funções add e rem tem instruções de saída (cout &lt;&lt; "Remarcado", etc.) embutidas.  </td><td class="markdownTableBodyLeft">Funções com dupla responsabilidade devem ser separadas em outras funções de responsabilidade única, impedindo readequação ou aproveitamento de interfaces gráficas.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2  </td><td class="markdownTableBodyLeft">Adequação e lógica  </td><td class="markdownTableBodyLeft">Falta de verificação de sobreposição parcial. Na função add e rem, o código checa apenas se o horário (h) é exatamente igual ao agendado.  </td><td class="markdownTableBodyLeft">Se um agendamento dura 60 minutos e começa às 14h, o sistema permite marcar outro no meio da consulta (ex: 14:30), pois o cálculo ignora a duração (dur) na colisão de horários  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">3  </td><td class="markdownTableBodyLeft">Manutenibilidade  </td><td class="markdownTableBodyLeft">Ao decorrer de todo o código são encontradas variáveis mal nomeadas, utilizando, na maioria das vezes, uma única letra. Exemplo: Todas as variáveis do struct e até o próprio struct "A".  </td><td class="markdownTableBodyLeft">Variáveis com nomes ruins e sem padrão carecem de significado, dificultando o entendimento de quem está lendo o código e prejudicando totalmente a manutenibilidade, já que agora, o tempo voltado a entender a lógica do código, foi tomado por entender o que cada letra significa.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">4  </td><td class="markdownTableBodyLeft">Manutenibilidade  </td><td class="markdownTableBodyLeft">A função add tem quatro comandos if aninhados sucessivamente e um for.  </td><td class="markdownTableBodyLeft">A função é difícil de ler, não retorna rápido e tenta fazer muitas validações acumuladas.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">5  </td><td class="markdownTableBodyLeft">Manutenibilidade  </td><td class="markdownTableBodyLeft">Comentários explicando códigos confusos como: // adiciona na lista na função add e // remarca o atendimento em rem.  </td><td class="markdownTableBodyLeft">O nome da função já deve deixar claro o que ela faz. Comentários devem explicar os "porquês" das decisões técnicas e de negócio, e não narrar o que o código está fazendo.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">6  </td><td class="markdownTableBodyLeft">Organização e estética  </td><td class="markdownTableBodyLeft">A lógica de varrer o vetor procurando um conflito de horário é idêntica dentro de add e repetida dentro de rem.  </td><td class="markdownTableBodyLeft">Se a regra de verificação de horários mudar, o desenvolvedor terá que alterar esse trecho manualmente em cada aparição sua, o que facilita introdução de novos bugs.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">7  </td><td class="markdownTableBodyLeft">Organização e estética  </td><td class="markdownTableBodyLeft">Código morto. Há uma função // void desmarcar(...) que foi totalmente comentada e abandonada no arquivo  </td><td class="markdownTableBodyLeft">Polui o código e cria confusão visual. Trechos inúteis ou deprecados devem ser deletados ou implementados de uma vez.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">8  </td><td class="markdownTableBodyLeft">Programação defensiva e segurança  </td><td class="markdownTableBodyLeft">Captura de erros genéricos e sem tratamento adequado na função add. Com catch(...).  </td><td class="markdownTableBodyLeft">Como o erro não é capturado de forma específica, ele também não é tratado, então qualquer erro que seja capturado é abafado de forma silenciosa, podendo causar problemas maiores e inesperados.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">9  </td><td class="markdownTableBodyLeft">Programação defensiva e segurança  </td><td class="markdownTableBodyLeft">Falta de validação de entradas. Não há verificação para garantir que o nome do paciente (p), o médico (pr) ou a data (d) não sejam strings vazias ("").  </td><td class="markdownTableBodyLeft">Parâmetros externos devem ser validados logo na entrada. Atualmente, o sistema permite marcar consultas com campos inexistentes  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">10  </td><td class="markdownTableBodyLeft">Desempenho e recursos  </td><td class="markdownTableBodyLeft">Busca sem interrupção. Nos laços for dentro de add e rem, o loop continua percorrendo o array inteiro mesmo após já ter encontrado uma colisão de horário (ok = false).  </td><td class="markdownTableBodyLeft">Gera iterações desnecessárias. Faltou um comando break ou um return imediato após constatar que o horário já está ocupado.  </td></tr>
+</table>
+<p><b>2. O que foi resolvido e o que ficou como dívida</b></p>
+<p><em>Uma linha por anomalia da seção 1, usando o mesmo número. Deixar algo por resolver é legítimo — desde que seja uma decisão consciente e justificada, e não um esquecimento. Dívida técnica declarada vale mais que dívida técnica escondida.</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">#  </th><th class="markdownTableHeadLeft">Situação  </th><th class="markdownTableHeadLeft">Como foi resolvida, ou por que ficou  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">1  </td><td class="markdownTableBodyLeft">Regras de negócio com I/O  </td><td class="markdownTableBodyLeft">Criação de um método separado para validar dados  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2  </td><td class="markdownTableBodyLeft">Conflito de horários de consultas  </td><td class="markdownTableBodyLeft">Método de validação verifica se há conflitos  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">3  </td><td class="markdownTableBodyLeft">Variáveis mal nomeadas  </td><td class="markdownTableBodyLeft">Mudança dos nomes de variáveis para esclarecer seus significados no código  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">4  </td><td class="markdownTableBodyLeft">Muitos if's aninhados  </td><td class="markdownTableBodyLeft">Separação dos if's para tratarem cláusulas de guarda e retornarem mais cedo  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">5  </td><td class="markdownTableBodyLeft">Comentários vagos  </td><td class="markdownTableBodyLeft">Criação de documentação de API e refatoração dos nomes dos métodos  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">6  </td><td class="markdownTableBodyLeft">Lógica de percorrer vetor repetida  </td><td class="markdownTableBodyLeft">Lógica implementada uma vez no método de validação  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">7  </td><td class="markdownTableBodyLeft">Código morto  </td><td class="markdownTableBodyLeft">Código defasado foi deletado  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">8  </td><td class="markdownTableBodyLeft">Catches genéricos  </td><td class="markdownTableBodyLeft">Catches agora capturam erros específicos  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">9  </td><td class="markdownTableBodyLeft">Parâmetros sem validação  </td><td class="markdownTableBodyLeft">Parâmetros passam por uma validação antes de entrarem na lógica principal  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">10  </td><td class="markdownTableBodyLeft">Busca sem interrupção  </td><td class="markdownTableBodyLeft">Os laços de repetição são interrompidos quando não é preciso mais percorrer a lista  </td></tr>
+</table>
+<p><em>Preencha a coluna "Situação" com Resolvida ou Dívida assumida.</em></p>
+<p><b>3. Decisões de projeto</b></p>
+<p><em>Registre de duas a quatro decisões que o código sozinho não explica: por que este tipo de dado e não outro, por que lançar exceção em vez de devolver valor padrão, por que separar em três funções e não em uma. O que se avalia aqui é a justificativa, não a escolha — quase sempre há mais de uma resposta defensável.</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Decisão tomada  </th><th class="markdownTableHeadLeft">Alternativa descartada  </th><th class="markdownTableHeadLeft">Por que decidimos assim  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Lançar invalid_argument quando o dado é inválido ou há conflito de horário  </td><td class="markdownTableBodyLeft">Manter o try { ... } catch (...) {} com if aninhados, que ignorava o erro sem avisar.  </td><td class="markdownTableBodyLeft">Na falha silenciosa, quem chama não sabe se a consulta foi marcada.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Extrair validar_dados e reutilizá-la em agendar_consulta e remarcar_agendamento  </td><td class="markdownTableBodyLeft">Repetir as validações e o laço de conflito dentro de cada função, como em add e rem  </td><td class="markdownTableBodyLeft">Há uma única fonte das regras (horário, duração, data, nomes, conflito)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Passar o vector&lt;Agendamento&gt; por parâmetro (const&amp; quando só lê)  </td><td class="markdownTableBodyLeft">Vetor global ag  </td><td class="markdownTableBodyLeft">A dependência fica explícita e não há estado escondido.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+</table>
+<p><b>4. Mudanças de comportamento</b></p>
+<p><em>A Etapa 4 muda, de propósito, o que o sistema faz com entradas inválidas. Registre cada mudança aqui. O caminho feliz não entra nesta tabela: se ele mudou, houve um erro de refatoração.</em></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Entrada ou situação  </th><th class="markdownTableHeadLeft">O que acontecia antes  </th><th class="markdownTableHeadLeft">O que acontece agora  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Hora de início &lt; 8 ou ≥ 18  </td><td class="markdownTableBodyLeft">Nada: nenhuma mensagem e nenhum agendamento (o catch (...) vazio engolia o caso)  </td><td class="markdownTableBodyLeft">Exceção "Hora fora do horário permitido: X"  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Hora de início = 17  </td><td class="markdownTableBodyLeft">Aceita (h &lt; 18)  </td><td class="markdownTableBodyLeft">Rejeitada (hora &gt;= HORARIO_FIM, com HORARIO_FIM = 17)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Hora + duração passando das 18h (ex.: 17h com 90 min)  </td><td class="markdownTableBodyLeft">Aceito, sem checagem  </td><td class="markdownTableBodyLeft">Exceção "Duração e horário do agendamento excedem as 18h"  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Data fora do padrão AAAA-MM-DD ao agendar  </td><td class="markdownTableBodyLeft">Aceita e gravada como veio  </td><td class="markdownTableBodyLeft">Exceção "Data inválida: ..."  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+</table>
+<p><b>5. Como executar e gerar a documentação</b></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Item  </th><th class="markdownTableHeadLeft">Resposta  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Comando para compilar e executar  </td><td class="markdownTableBodyLeft">$ g++ <a class="el" href="agenda__base_8cpp.html">agenda_base.cpp</a> -o agenda &amp;&amp; ./agenda  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Comando para gerar a documentação de API  </td><td class="markdownTableBodyLeft">$ doxygen Doxyfile  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Onde a documentação gerada ficou no repositório  </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Saída do programa de demonstração (cole aqui)  </td><td class="markdownTableBodyLeft"></td></tr>
+</table>
+<p>Saída:</p>
+<p><a class="el" href="structAgendamento.html">Agendamento</a> realizado para Ana<br  />
+ Erro: <a class="el" href="structAgendamento.html">Agendamento</a> já existe para o mesmo profissional e horário<br  />
+ <a class="el" href="structAgendamento.html">Agendamento</a> realizado para Carla<br  />
+ Remarcado com sucesso<br  />
+ 14:00 | Carla | Dra. Souza | Marcado<br  />
+</p>
+<p><b>6. Uso de ferramentas de IA</b></p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Pergunta  </th><th class="markdownTableHeadLeft">Resposta  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Foram usadas ferramentas de IA neste trabalho?  </td><td class="markdownTableBodyLeft">( ) Não ( ) Sim  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Em quais etapas, e para quê?  </td><td class="markdownTableBodyLeft"></td></tr>
+</table>
+<p><em>O uso é permitido. O professor pode pedir que qualquer integrante explique qualquer trecho do código entregue.</em></p>
+<p><b>Conferência antes de enviar</b></p>
+<p><b>☐</b> O programa de demonstração compila e roda, e imprime a mesma saída do código-base.</p>
+<p><b>☐</b> Toda anomalia da seção 1 aparece na seção 2, resolvida ou declarada como dívida.</p>
+<p><b>☐</b> O README permite que outra pessoa execute o projeto sem perguntar nada.</p>
+<p><b>☐</b> Os textos em itálico deste modelo foram apagados.</p>
+<p><em>Código que funciona mas não se explica não está pronto.</em> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

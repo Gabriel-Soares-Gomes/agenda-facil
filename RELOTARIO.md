@@ -77,8 +77,8 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 | :---- | :---- |
 | Comando para compilar e executar | $ g++ agenda_base.cpp -o agenda && ./agenda |
 | Comando para gerar a documentação de API | $ doxygen Doxyfile |
-| Onde a documentação gerada ficou no repositório |  |
-| Saída do programa de demonstração (cole aqui) |  |
+| Onde a documentação gerada ficou no repositório | docs/html |
+| Saída do programa de demonstração |  |
 
 Saída: 
 
@@ -93,8 +93,8 @@ Remarcado com sucesso<br>
 
 | Pergunta | Resposta |
 | :---- | :---- |
-| Foram usadas ferramentas de IA neste trabalho? | (   ) Não        (   ) Sim |
-| Em quais etapas, e para quê? |  |
+| Foram usadas ferramentas de IA neste trabalho? | (   ) Não        ( X ) Sim |
+| Em quais etapas, e para quê? | Foi utilizado IA para a geração do texto base do relatório |
 
 *O uso é permitido. O professor pode pedir que qualquer integrante explique qualquer trecho do código entregue.*
 

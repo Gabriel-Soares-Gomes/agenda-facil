@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Agenda de Consultas: Referência do Arquivo agenda_base.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Agenda de Consultas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Busca',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('agenda__base_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência do Arquivo agenda_base.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;regex&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:Agendamento" id="r_Agendamento"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structAgendamento.html">Agendamento</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a1fac0b96851b7365a1d474ee58c29e42" id="r_a1fac0b96851b7365a1d474ee58c29e42"><td class="memItemLeft">const regex&#160;</td><td class="memItemRight"><a class="el" href="#a1fac0b96851b7365a1d474ee58c29e42">data_padrao</a> (R&quot;(^\d{4}-\d{2}-\d{2}$)&quot;)</td></tr>
+<tr class="memitem:a9646dfe064903de21ce03c2294a16640" id="r_a9646dfe064903de21ce03c2294a16640"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9646dfe064903de21ce03c2294a16640">validar_dados</a> (string paciente, string profissional, string data, int hora, int duracao, const vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;agendamentos)</td></tr>
+<tr class="memdesc:a9646dfe064903de21ce03c2294a16640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida os dados de um agendamento, verificando horários, duração, formato da data e conflitos com outros agendamentos.  <br /></td></tr>
+<tr class="memitem:a93d03da38a6090867f63cd356dcb6714" id="r_a93d03da38a6090867f63cd356dcb6714"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a93d03da38a6090867f63cd356dcb6714">agendar_consulta</a> (string paciente, string profissional, string data, int hora, int duracao, vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;agendamentos)</td></tr>
+<tr class="memdesc:a93d03da38a6090867f63cd356dcb6714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agenda uma consulta para um paciente com um profissional específico em uma data e hora determinadas.  <br /></td></tr>
+<tr class="memitem:afac3a85e295ce0980cf22601a27f2827" id="r_afac3a85e295ce0980cf22601a27f2827"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afac3a85e295ce0980cf22601a27f2827">remarcar_agendamento</a> (string paciente, string data, int hora, string nova_data, int nova_hora, vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;agendamentos)</td></tr>
+<tr class="memdesc:afac3a85e295ce0980cf22601a27f2827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remarca um agendamento existente para uma nova data e hora.  <br /></td></tr>
+<tr class="memitem:af33a6bb7f810247db3a6448ec8fa450c" id="r_af33a6bb7f810247db3a6448ec8fa450c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af33a6bb7f810247db3a6448ec8fa450c">listar_agendamentos</a> (string data, const vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;agendamentos)</td></tr>
+<tr class="memdesc:af33a6bb7f810247db3a6448ec8fa450c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os agendamentos para uma data específica.  <br /></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a1ac089e7654848af561638ba98733a0a" id="r_a1ac089e7654848af561638ba98733a0a"><td class="memItemLeft">const unsigned short int&#160;</td><td class="memItemRight"><a class="el" href="#a1ac089e7654848af561638ba98733a0a">HORARIO_INICIO</a> = 8</td></tr>
+<tr class="memitem:aa19b0fe28ab6cf422feb1cdee19f04c7" id="r_aa19b0fe28ab6cf422feb1cdee19f04c7"><td class="memItemLeft">const unsigned short int&#160;</td><td class="memItemRight"><a class="el" href="#aa19b0fe28ab6cf422feb1cdee19f04c7">HORARIO_FIM</a> = 17</td></tr>
+<tr class="memitem:a740a83d8e8dd3ba67d2a0917b1cc3c3b" id="r_a740a83d8e8dd3ba67d2a0917b1cc3c3b"><td class="memItemLeft">const unsigned short int&#160;</td><td class="memItemRight"><a class="el" href="#a740a83d8e8dd3ba67d2a0917b1cc3c3b">MINS_POR_PERIODO</a> = 15</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funções</h2>
+<a id="a93d03da38a6090867f63cd356dcb6714" name="a93d03da38a6090867f63cd356dcb6714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d03da38a6090867f63cd356dcb6714">&#9670;&#160;</a></span>agendar_consulta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void agendar_consulta </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>paciente</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>profissional</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hora</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>duracao</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>agendamentos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agenda uma consulta para um paciente com um profissional específico em uma data e hora determinadas. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paciente</td><td>Nome do paciente. </td></tr>
+    <tr><td class="paramname">profissional</td><td>Nome do profissional. </td></tr>
+    <tr><td class="paramname">data</td><td>Data do agendamento no formato AAAA-MM-DD. </td></tr>
+    <tr><td class="paramname">hora</td><td>Hora do agendamento (em formato 24h). </td></tr>
+    <tr><td class="paramname">duracao</td><td>Duração do agendamento em minutos. </td></tr>
+    <tr><td class="paramname">agendamentos</td><td>Lista de agendamentos existentes para verificar conflitos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Se algum dos dados for inválido ou se houver conflito com outro agendamento existente. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1fac0b96851b7365a1d474ee58c29e42" name="a1fac0b96851b7365a1d474ee58c29e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fac0b96851b7365a1d474ee58c29e42">&#9670;&#160;</a></span>data_padrao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const regex data_padrao </td>
+          <td>(</td>
+          <td class="paramtype">R&quot;(^\d{4}-\d{2}-\d{2}$)&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af33a6bb7f810247db3a6448ec8fa450c" name="af33a6bb7f810247db3a6448ec8fa450c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33a6bb7f810247db3a6448ec8fa450c">&#9670;&#160;</a></span>listar_agendamentos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listar_agendamentos </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>agendamentos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista todos os agendamentos para uma data específica. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Data dos agendamentos no formato AAAA-MM-DD. </td></tr>
+    <tr><td class="paramname">agendamentos</td><td>Lista de agendamentos existentes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Se a data for inválida. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afac3a85e295ce0980cf22601a27f2827" name="afac3a85e295ce0980cf22601a27f2827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac3a85e295ce0980cf22601a27f2827">&#9670;&#160;</a></span>remarcar_agendamento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remarcar_agendamento </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>paciente</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hora</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>nova_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nova_hora</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>agendamentos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remarca um agendamento existente para uma nova data e hora. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paciente</td><td>Nome do paciente. </td></tr>
+    <tr><td class="paramname">data</td><td>Data do agendamento no formato AAAA-MM-DD. </td></tr>
+    <tr><td class="paramname">hora</td><td>Hora do agendamento (em formato 24h). </td></tr>
+    <tr><td class="paramname">nova_data</td><td>Nova data do agendamento no formato AAAA-MM-DD. </td></tr>
+    <tr><td class="paramname">nova_hora</td><td>Nova hora do agendamento (em formato 24h). </td></tr>
+    <tr><td class="paramname">agendamentos</td><td>Lista de agendamentos existentes para verificar conflitos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Se o agendamento não for encontrado ou se os novos dados forem inválidos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9646dfe064903de21ce03c2294a16640" name="a9646dfe064903de21ce03c2294a16640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9646dfe064903de21ce03c2294a16640">&#9670;&#160;</a></span>validar_dados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void validar_dados </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>paciente</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>profissional</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hora</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>duracao</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; <a class="el" href="structAgendamento.html">Agendamento</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>agendamentos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valida os dados de um agendamento, verificando horários, duração, formato da data e conflitos com outros agendamentos. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paciente</td><td>Nome do paciente. </td></tr>
+    <tr><td class="paramname">profissional</td><td>Nome do profissional. </td></tr>
+    <tr><td class="paramname">data</td><td>Data do agendamento no formato AAAA-MM-DD. </td></tr>
+    <tr><td class="paramname">hora</td><td>Hora do agendamento (em formato 24h). </td></tr>
+    <tr><td class="paramname">duracao</td><td>Duração do agendamento em minutos. </td></tr>
+    <tr><td class="paramname">agendamentos</td><td>Lista de agendamentos existentes para verificar conflitos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Se algum dos dados for inválido ou se houver conflito com outro agendamento existente. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variáveis</h2>
+<a id="aa19b0fe28ab6cf422feb1cdee19f04c7" name="aa19b0fe28ab6cf422feb1cdee19f04c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa19b0fe28ab6cf422feb1cdee19f04c7">&#9670;&#160;</a></span>HORARIO_FIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned short int HORARIO_FIM = 17</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ac089e7654848af561638ba98733a0a" name="a1ac089e7654848af561638ba98733a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac089e7654848af561638ba98733a0a">&#9670;&#160;</a></span>HORARIO_INICIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned short int HORARIO_INICIO = 8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a740a83d8e8dd3ba67d2a0917b1cc3c3b" name="a740a83d8e8dd3ba67d2a0917b1cc3c3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740a83d8e8dd3ba67d2a0917b1cc3c3b">&#9670;&#160;</a></span>MINS_POR_PERIODO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned short int MINS_POR_PERIODO = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="agenda__base_8cpp.html">agenda_base.cpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
