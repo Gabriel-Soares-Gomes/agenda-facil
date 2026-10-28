@@ -10,12 +10,7 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 | **Repositório ou arquivo entregue** | https://github.com/Gabriel-Soares-Gomes/agenda-facil |
 |  |  |
 
-**Como usar este modelo:**  preencha as seis seções abaixo, apague os textos em itálico e entregue em PDF ou Markdown. O relatório inteiro deve caber em até quatro páginas — é um documento de decisões, não uma redação.
-
 **1\. Diagnóstico do código-base**
-
-*Liste pelo menos dez anomalias encontradas no código-base, com no mínimo uma em cada categoria do checklist da Aula 2\. Em "onde", aponte a função, a variável ou a linha — "está tudo errado" não é localização. Em "por que é um problema", escreva o efeito prático sobre quem vai ler ou manter o código, não a regra violada. Numere as anomalias: a seção 2 vai se referir a elas por número.*
-
 | \# | Categoria | Anomalia e onde está | Por que é um problema |
 | :---- | :---- | :---- | :---- |
 | 1 | Adequação e lógica | Mistura de regras de negócio com I/O. As funções add e rem tem instruções de saída (cout << "Remarcado", etc.) embutidas. | Funções com dupla responsabilidade devem ser separadas em outras funções de responsabilidade única, impedindo readequação ou aproveitamento de interfaces gráficas. |
@@ -31,8 +26,6 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 
 **2\. O que foi resolvido e o que ficou como dívida**
 
-*Uma linha por anomalia da seção 1, usando o mesmo número. Deixar algo por resolver é legítimo — desde que seja uma decisão consciente e justificada, e não um esquecimento. Dívida técnica declarada vale mais que dívida técnica escondida.*
-
 | \# | Situação | Como foi resolvida, ou por que ficou |
 | :---- | :---- | :---- |
 | 1 | Regras de negócio com I/O | Criação de um método separado para validar dados |
@@ -46,11 +39,7 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 | 9 | Parâmetros sem validação | Parâmetros passam por uma validação antes de entrarem na lógica principal |
 | 10 | Busca sem interrupção | Os laços de repetição são interrompidos quando não é preciso mais percorrer a lista  |
 
-*Preencha a coluna "Situação" com Resolvida ou Dívida assumida.*
-
 **3\. Decisões de projeto**
-
-*Registre de duas a quatro decisões que o código sozinho não explica: por que este tipo de dado e não outro, por que lançar exceção em vez de devolver valor padrão, por que separar em três funções e não em uma. O que se avalia aqui é a justificativa, não a escolha — quase sempre há mais de uma resposta defensável.*
 
 | Decisão tomada | Alternativa descartada | Por que decidimos assim |
 | :---- | :---- | :---- |
@@ -60,8 +49,6 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 |  |  |  |
 
 **4\. Mudanças de comportamento**
-
-*A Etapa 4 muda, de propósito, o que o sistema faz com entradas inválidas. Registre cada mudança aqui. O caminho feliz não entra nesta tabela: se ele mudou, houve um erro de refatoração.*
 
 | Entrada ou situação | O que acontecia antes | O que acontece agora |
 | :---- | :---- | :---- |
@@ -95,17 +82,3 @@ Remarcado com sucesso<br>
 | :---- | :---- |
 | Foram usadas ferramentas de IA neste trabalho? | (   ) Não        ( X ) Sim |
 | Em quais etapas, e para quê? | Foi utilizado IA para a geração do texto base do relatório |
-
-*O uso é permitido. O professor pode pedir que qualquer integrante explique qualquer trecho do código entregue.*
-
-**Conferência antes de enviar**
-
-**☐**  O programa de demonstração compila e roda, e imprime a mesma saída do código-base.
-
-**☐**  Toda anomalia da seção 1 aparece na seção 2, resolvida ou declarada como dívida.
-
-**☐**  O README permite que outra pessoa execute o projeto sem perguntar nada.
-
-**☐**  Os textos em itálico deste modelo foram apagados.
-
-*Código que funciona mas não se explica não está pronto.*
