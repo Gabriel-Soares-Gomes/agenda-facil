@@ -54,9 +54,9 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 
 | Decisão tomada | Alternativa descartada | Por que decidimos assim |
 | :---- | :---- | :---- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Lançar invalid_argument quando o dado é inválido ou há conflito de horário | Manter o try { ... } catch (...) {} com if aninhados, que ignorava o erro sem avisar. | Na falha silenciosa, quem chama não sabe se a consulta foi marcada. |
+| Extrair validar_dados e reutilizá-la em agendar_consulta e remarcar_agendamento | Repetir as validações e o laço de conflito dentro de cada função, como em add e rem | Há uma única fonte das regras (horário, duração, data, nomes, conflito) |
+| Passar o vector<Agendamento> por parâmetro (const& quando só lê) | Vetor global ag	 | A dependência fica explícita e não há estado escondido. |
 |  |  |  |
 
 **4\. Mudanças de comportamento**
@@ -65,18 +65,18 @@ Prof. Marcus Terra   ·   DIMAp/UFRN   ·   Semestre 2026.1   ·   Entrega: 25/1
 
 | Entrada ou situação | O que acontecia antes | O que acontece agora |
 | :---- | :---- | :---- |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Hora de início < 8 ou ≥ 18 | Nada: nenhuma mensagem e nenhum agendamento (o catch (...) vazio engolia o caso) | Exceção "Hora fora do horário permitido: X" |
+| Hora de início = 17 | Aceita (h < 18) | 	Rejeitada (hora >= HORARIO_FIM, com HORARIO_FIM = 17) |
+| Hora + duração passando das 18h (ex.: 17h com 90 min) | Aceito, sem checagem	 | Exceção "Duração e horário do agendamento excedem as 18h" |
+| Data fora do padrão AAAA-MM-DD ao agendar | Aceita e gravada como veio | Exceção "Data inválida: ..." |
 |  |  |  |
 
 **5\. Como executar e gerar a documentação**
 
 | Item | Resposta |
 | :---- | :---- |
-| Comando para compilar e executar | > g++ agenda_base.cpp -o agenda && ./agenda |
-| Comando para gerar a documentação de API |  |
+| Comando para compilar e executar | $ g++ agenda_base.cpp -o agenda && ./agenda |
+| Comando para gerar a documentação de API | $ doxygen Doxyfile |
 | Onde a documentação gerada ficou no repositório |  |
 | Saída do programa de demonstração (cole aqui) |  |
 
