@@ -81,4 +81,4 @@ Remarcado com sucesso<br>
 | Pergunta | Resposta |
 | :---- | :---- |
 | Foram usadas ferramentas de IA neste trabalho? | (   ) Não        ( X ) Sim |
-| Em quais etapas, e para quê? | Foi utilizado IA para a geração do texto base do relatório |
+| Em quais etapas, e para quê? | Foi utilizado IA para a geração do texto base do readme |
